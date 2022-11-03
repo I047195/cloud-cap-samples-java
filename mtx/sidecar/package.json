@@ -1,0 +1,18 @@
+{
+    "name": "mtx-sidecar", "version": "0.0.0",
+    "dependencies": {
+      "@sap/cds": "^6",
+      "@sap/cds-mtxs": "^1",
+      "express": "^4"
+    },
+    "cds": {
+      "requires": {
+        "cds.xt.ModelProviderService": "in-sidecar"
+      },
+      "[development]": {
+        "requires": { "auth": "dummy" },
+        "server": { "port": 4005 }
+      }
+    }
+  }
+  

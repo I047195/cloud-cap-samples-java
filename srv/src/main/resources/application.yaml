@@ -93,5 +93,27 @@ cds:
 spring:
   config.activate.on-profile: default
 cds:
+  odata-v4.endpoint.path: "/api"
   data-source:
     auto-config.enabled: false
+  security.mock:
+    enabled: true
+    users:
+    - name: carol
+      password: carol
+      tenant: t1
+      features:
+      - isbn
+    - name: erin
+      features:
+      - isbn
+      - reviews
+    - name: fred
+      features:
+    tenants :
+    - t1 : 
+      features : 
+      - isbn
+  model:
+    provider:
+      url: http://localhost:4005
